@@ -1,0 +1,39 @@
+.app__content{
+    height: 90vh;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+    justify-content: center;
+    
+}
+.app__content > h1{
+    padding-left: 20%;
+    padding-top: 250px;
+    font-size: larger;
+
+}
+
+  
+  .typing-demo {
+    width: 27ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
