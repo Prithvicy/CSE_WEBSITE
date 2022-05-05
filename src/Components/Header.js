@@ -15,24 +15,33 @@ import { Link as RouterLink } from "react-router-dom";
 
 const headersData = [
   {
-    label: "Home",
+    h1: "Home",
     href: "/home",
   },
   {
-    label: "Faculty",
+    h1: "Faculty",
     href: "/faculty",
   },
   {
-    label: "Research",
+    h1: "Research",
     href: "/research",
   },
   {
-    label: "Students",
+    h1: "Students",
     href: "/students",
   },
   {
-    label: "Career",
+    h1: "Career",
     href: "/career",
+  },
+ 
+  {
+    h1: "Student Chapter",
+    href: "/studentChapter",
+  },
+  {
+    h1: "Testemonials",
+    href: "/testemonials",
   },
 ];
 
@@ -41,8 +50,11 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "transparent",
     paddingRight: "79px",
     paddingLeft: "118px",
+    
     "@media (max-width: 900px)": {
       paddingLeft: 0,
+      marginTop:0,
+      
     },
   },
   logo: {
@@ -56,6 +68,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: 700,
     size: "18px",
     marginLeft: "38px",
+    textDecoration:"none",
   },
   toolbar: {
     display: "flex",
@@ -64,6 +77,7 @@ const useStyles = makeStyles(() => ({
   drawerContainer: {
     padding: "20px 30px",
   },
+  
 }));
 
 export default function Header() {
@@ -95,7 +109,7 @@ export default function Header() {
   const displayDesktop = () => {
     return (
       <Toolbar className={toolbar}>
-        {femmecubatorLogo}
+        {CSELOGO}
         <div>{getMenuButtons()}</div>
       </Toolbar>
     );
@@ -131,13 +145,13 @@ export default function Header() {
           <div className={drawerContainer}>{getDrawerChoices()}</div>
         </Drawer>
 
-        <div>{femmecubatorLogo}</div>
+        <div>{CSELOGO}</div>
       </Toolbar>
     );
   };
 
   const getDrawerChoices = () => {
-    return headersData.map(({ label, href }) => {
+    return headersData.map(({ h1, href }) => {
       return (
         <Link
           {...{
@@ -145,35 +159,38 @@ export default function Header() {
             to: href,
             color: "inherit",
             style: { textDecoration: "none" },
-            key: label,
+            key: h1,
           }}
         >
-          <MenuItem>{label}</MenuItem>
+                  <Button>
+
+          <MenuItem>{h1}</MenuItem>
+          </Button>
         </Link>
       );
     });
   };
 
-  const femmecubatorLogo = (
+  const CSELOGO = (
     <Typography variant="h6" component="h1" className={logo}>
       CSE DEPARTMENT
     </Typography>
   );
 
   const getMenuButtons = () => {
-    return headersData.map(({ label, href }) => {
+    return headersData.map(({ h1, href }) => {
       return (
-        <Button
+        <Link
           {...{
-            key: label,
+            key: h1,
             color: "inherit",
             to: href,
             component: RouterLink,
             className: menuButton,
           }}
         >
-          {label}
-        </Button>
+          {h1}
+        </Link>
       );
     });
   };

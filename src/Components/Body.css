@@ -1,6 +1,7 @@
 .app__content{
+  z-index: 99;
     height: 100vh;
-    color: white;
+    color: rgb(255, 255, 255);
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -18,7 +19,7 @@
   
   .typing-demo {
     width: 27ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    animation: typing 4s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
