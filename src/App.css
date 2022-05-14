@@ -1,3 +1,6 @@
 *{
     z-index: -100;
 }
+#app-background{
+    padding-top: 12vh;
+}
