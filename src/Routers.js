@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Body from "./Components/Body";
 import Header from "./Components/Header";
+import HeaderMoba from "./Components/HeaderMoba";
 import Career from "./Pages/Career";
 import Faculty from "./Pages/Faculty";
 import Research from "./Pages/Research";
@@ -18,6 +19,7 @@ const Routers = () => {
           path="/"
           element={
             <>
+              <HeaderMoba />
               <Header />
               <Body />
             </>
