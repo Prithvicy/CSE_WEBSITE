@@ -4,32 +4,51 @@ import logo from "../Assets/logoDummy.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  React.useEffect(() => {
+    window.addEventListener("load", () => {
+      headerSwitch();
+    });
+    window.addEventListener("resize", () => {
+      headerSwitch();
+    });
+
+    const headerSwitch = () => {
+      var x = document.body.clientWidth;
+      var y = document.getElementById("header").style;
+      if (x < 1300) {
+        y.display = 'none';
+      }
+      else {
+        y.display = 'flex';
+      }
+    };
+  });
   return (
-    <div className="header">
+    <div className="header" id='header'>
       <div className="header1" id="myHeader">
         <Link to="/" className="logo">
           <img src={logo} alt="" />
         </Link>
         <div className="header__items">
-      
-        <Link to="/regulations">
-          <span>Curriculum Regulations</span>
-        </Link>
-        <Link to="/faculty">
-          <span className="headbut">Faculty</span>
-        </Link>
-        <Link to="/research">
-          <span>Research</span>
-        </Link>
-        <Link to="/infrastructure">
-          <span>Infrastructure</span>
-        </Link>
-        <Link to="/testimonial">
-          <span>Testimonials</span>
-        </Link>
-        <Link to="/p">
-          <span>PEO and PSO</span>
-        </Link>
+
+          <Link to="/regulations">
+            <span>Curriculum Regulations</span>
+          </Link>
+          <Link to="/faculty">
+            <span className="headbut">Faculty</span>
+          </Link>
+          <Link to="/research">
+            <span>Research</span>
+          </Link>
+          <Link to="/infrastructure">
+            <span>Infrastructure</span>
+          </Link>
+          <Link to="/testimonials">
+            <span>Testimonials</span>
+          </Link>
+          <Link to="/p">
+            <span>PEO and PSO</span>
+          </Link>
         </div>
 
       </div>

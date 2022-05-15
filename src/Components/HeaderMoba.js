@@ -2,10 +2,12 @@ import React from "react";
 import "./HeaderMoba.css";
 import { Link } from "react-router-dom";
 
-// comment Header in Routers.js
-// to see mobile view of header
+// test with testimonials
 
 const HeaderMoba = () => {
+  React.useEffect(() => {
+    window.addEventListener('load', closeNav());
+  });
   return (
     <div>
       <span onClick={bodyAddClass}>
@@ -18,10 +20,10 @@ const HeaderMoba = () => {
       <div className="nav" id='nav'>
         <div className="nav__content">
           <div className="nav__list">
-            <Link to='/p' className="nav__list-item">
+            <Link to='/peo' className="nav__list-item">
               <span>PEO and PSO</span>
             </Link>
-            <Link to='/' className="nav__list-item">
+            <Link to='/testimonials' className="nav__list-item">
               <span>Testimonials</span>
             </Link>
             <Link to='/' className="nav__list-item">
@@ -68,7 +70,6 @@ const HeaderMoba = () => {
 };
 
 const bodyAddClass = () => {
-  console.log('menu clicked')
   let body = document.querySelector('body');
   if (body.classList.contains('nav-active')) {
     body.classList.remove('nav-active');
@@ -77,6 +78,14 @@ const bodyAddClass = () => {
   else {
     body.classList.add('nav-active');
     document.getElementById('nav').style.zIndex = '1';
+  }
+}
+
+const closeNav = () => {
+  let body = document.querySelector('body');
+  if (body.classList.contains('nav-active')) {
+    body.classList.remove('nav-active');
+    document.getElementById('nav').style.zIndex = '-1';
   }
 }
 export default HeaderMoba;

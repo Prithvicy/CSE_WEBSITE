@@ -87,9 +87,10 @@ const Routers = () => {
         />
         <Route
           exact
-          path="/testemonials"
+          path="/testimonials"
           element={
             <>
+              <HeaderMoba />
               <Header />
               <Testimonials />
             </>

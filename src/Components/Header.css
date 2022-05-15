@@ -1,34 +1,35 @@
 .header {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: fixed;
   z-index: 9999999;
   width: 100%;
 }
-.header img{
-    height: 7vh;
-    width: 20vh;
-}
-.headbut{
-    text-align: none;
+
+.header img {
+  height: 7vh;
+  width: 20vh;
 }
 
-.header a{
+.headbut {
+  text-align: none;
+}
+
+.header a {
   text-decoration: none;
   color: white;
 }
 
 .header a span {
-  padding: 9px ;
+  padding: 9px;
   margin: 0px 20px;
   border: 0px solid transparent;
   border-radius: 30px;
   float: right;
-  /* display:flex;
-  justify-content: flex-end; */
   background-color: grey;
 }
-.header__items{
+
+.header__items {
   padding-right: 60px;
 
 }
@@ -47,6 +48,7 @@
   height: max-content;
 
 }
+
 .header2 {
   display: flex;
   background: #555;
@@ -58,7 +60,8 @@
   height: max-content;
 }
 
-.logo{
+.logo {
   left: 10px;
-  z-index: 999;;
+  z-index: 999;
+  ;
 }
