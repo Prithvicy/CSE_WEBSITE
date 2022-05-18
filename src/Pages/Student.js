@@ -3,7 +3,7 @@ import "./Student.css"
 
 const Student = () => {
   return <div className="student">
-      
+      Student
   </div>;
 };
 
