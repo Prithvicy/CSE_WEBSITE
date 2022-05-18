@@ -46,7 +46,7 @@ const Header = () => {
           <Link to="/testimonials">
             <span>Testimonials</span>
           </Link>
-          <Link to="/p">
+          <Link to="/peoandpso">
             <span>PEO and PSO</span>
           </Link>
         </div>
@@ -56,16 +56,16 @@ const Header = () => {
         <Link to="/placemenets">
           <span>Placements</span>
         </Link>
-        <Link to="/hstudies">
+        <Link to="/higherstudies">
           <span>Higher Studies</span>
         </Link>
-        <Link to="/rholders">
+        <Link to="/rankholders">
           <span>Rank Holders </span>
         </Link>
         <Link to="/students">
           <span>Students </span>
         </Link>
-        <Link to="/ealumni">
+        <Link to="/elitealumni">
           <span>Elite Alumni </span>
         </Link>
         <Link to="/chapter">
@@ -74,7 +74,7 @@ const Header = () => {
         <Link to="/club">
           <span>Club </span>
         </Link>
-        <Link to="/bmembers">
+        <Link to="/bosmembers">
           <span>bos members</span>
         </Link>
       </div>

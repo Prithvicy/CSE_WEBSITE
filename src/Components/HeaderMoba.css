@@ -11,8 +11,8 @@ body {
   width: 9.765625vh;
   position: fixed;
   z-index: 2;
-  left: 50px;
-  top: 30px;
+  left: 3.255vw;
+  top: 4.1322314049587vh;
   cursor: pointer;
 }
 
@@ -84,17 +84,18 @@ body {
 .nav__list-item {
   z-index: 2;
   position: relative;
-  /* display: inline-block; */
   transition-delay: 0.8s;
   opacity: 0;
   transform: translate(0%, 0%);
   transition: opacity 0.2s ease, transform 0.3s ease;
   font-size: 10vw;
-  /* margin-right: 25px; */
-  margin: 50px 10px;
+  margin: 4.8870523415978vh 2vh;
   text-decoration: none;
   color: white;
+}
 
+.nav__list-item > span{
+  /* background-color: #1e2023; */
 }
 
 .nav__list-item:before {
@@ -102,7 +103,7 @@ body {
   position: absolute;
   background: #ffffff;
   width: 10vw;
-  height: 1px;
+  height: 0.13774104683196vh;
   top: 100%;
   left: 45%;
   transform: translate(0%, 0%);
