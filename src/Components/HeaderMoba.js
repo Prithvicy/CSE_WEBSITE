@@ -7,6 +7,40 @@ const HeaderMoba = () => {
   React.useEffect(() => {
     window.addEventListener('load', closeNav());
   });
+  const dropdownH = {
+    'faculty': {
+      heading: "Faculty",
+      subInfo: [
+        ["Staff or Faculty", "/faculty/stafforfaculty"],
+        ["Mentor", "/faculty/mentor"],
+        ["Student Welfare Committee", "/faculty/studentwelfarecommittee"],
+      ]
+    },
+    'research': {
+      heading: "Research",
+      subInfo: [
+        ["Supervisors", "/research/supervisors"],
+        ["PhD Awarded Dept Faculty", "/research/phdawardedfaculty"],
+        ["Scholars", "/research/scholars"],
+        ["Projects", "/research/projects"],
+        ["Patents", "/research/patents"],
+        ["Publications", "/research/publications "],
+      ]
+    },
+    'students': {
+      heading: "Students",
+      subInfo: [
+        ["Achievements", "/students/achievements"],
+        ["Guest Lecture", "/students/guestlecture"],
+        ["Workshop ", "/students/workshop"],
+        ["Industrial Visit", "/students/industrialvisit"],
+        ["Value Added Course", "/students/valueaddedcourse"],
+        ["Project Expo", "/students/projectexpo"],
+        ["Social Programs", "/students/socialprograms"],
+        ["Excel In Sports", "/students/excelinsports"],
+      ]
+    },
+  };
   return (
     <div>
       <span onClick={bodyAddClass}>
@@ -22,21 +56,16 @@ const HeaderMoba = () => {
             <Link to='/peoandpso' className="nav__list-item">
               <span>PEO and PSO</span>
             </Link>
-            <span className="nav__list-item"><Dropdown data={dropdownH[0]} /></span>
-            <Link to='/testimonials' className="nav__list-item">
-              <span>Testimonials</span>
+            <Link to='/regulations' className="nav__list-item">
+              <span>Curriculum Regulations</span>
             </Link>
+            <span className="nav__list-item"><Dropdown data={dropdownH['faculty']} /></span>
+            <span className="nav__list-item"><Dropdown data={dropdownH['research']} /></span>
             <Link to='/infrastructure' className="nav__list-item">
               <span>Infrastructure</span>
             </Link>
-            <Link to='/research' className="nav__list-item">
-              <span>Research</span>
-            </Link>
-            <Link to='/faculty' className="nav__list-item">
-              <span>Faculty</span>
-            </Link>
-            <Link to='/regulations' className="nav__list-item">
-              <span>Curriculum Regulations</span>
+            <Link to='/testimonials' className="nav__list-item">
+              <span>Testimonials</span>
             </Link>
             <Link to='/placemenets' className="nav__list-item">
               <span>Placements</span>
@@ -44,13 +73,10 @@ const HeaderMoba = () => {
             <Link to='/higherstudies' className="nav__list-item">
               <span>Higher Studies</span>
             </Link>
-            <span className="nav__list-item"><Dropdown data={dropdownH[1]} /></span>
             <Link to='/rankholders' className="nav__list-item">
               <span>Rank Holders </span>
             </Link>
-            <Link to='/students' className="nav__list-item">
-              <span>Students </span>
-            </Link>
+            <span className="nav__list-item"><Dropdown data={dropdownH['students']} /></span>
             <Link to='/elitealumni' className="nav__list-item">
               <span>Elite Alumni </span>
             </Link>
@@ -90,24 +116,6 @@ const closeNav = () => {
   }
 }
 
-const dropdownH = [
-  {
-    heading: "Dropdown 1",
-    subInfo: [
-      ["subheading1", "/link1"],
-      ["subheading2", "/link2"],
-      ["subheading3", "/link2"],
-      ["subheading4", "/link4"],
-    ]
-  },
-  {
-    heading: "Dropdown 2",
-    subInfo: [
-      ["subheading1", "/link1"],
-      ["subheading2", "/link2"],
-      ["subheading3", "/link2"],
-      ["subheading4", "/link4"],
-    ]
-  },
-];
+
 export default HeaderMoba;
+

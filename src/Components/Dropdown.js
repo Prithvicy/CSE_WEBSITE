@@ -13,6 +13,7 @@ function Dropdown(props) {
     setSelected(i)
   }
   const data = props.data;
+  console.log(typeof(data),data)
 
   return (
     <div className="wrapper">
